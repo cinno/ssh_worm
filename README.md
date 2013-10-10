@@ -14,7 +14,7 @@ private network that has SSH running.
 
 ## Compile to executable
 
-You should use Pyinstaller to make this into a stand alone executable so you 
+You should use [Pyinstaller](http://www.pyinstaller.org/) to make this into a stand alone executable so you 
 don't have to worry about portability to another machine (does it have the 
 necessary libraries, etc.). The command to use wthin the Pyinstaller dir is:
 ./pyinstaller.py --onefile ../ssh_worm/worm.py This will create a worm dir
